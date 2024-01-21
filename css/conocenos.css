@@ -1,0 +1,884 @@
+/* --------------------------------------
+conocenos.css
+- Reset / Normalizar
+- Header
+- Main
+- Footer
+- Responsive
+----------------------------------------- */
+
+/* --------- Reset ------- */
+@font-face {
+  font-family: Nothing;
+  src: url(../font/nothing-font-5x7.ttf);
+}
+
+@font-face {
+  font-family: Ntype82;
+  src: url(../font/NType82-Regular.ttf);
+}
+
+@charset "UTF-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  vertical-align: baseline;
+}
+
+/* Evitamos problemas con las imagenes */
+img,
+picture,
+video,
+iframe,
+figure {
+  max-width: 100%;
+  width: 100%;
+  display: block;
+
+}
+
+/* Reseteamos los enlaces para funcionar como cajas... */
+a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  font-size: inherit;
+}
+
+/* ... excepto los que se encuentran en párrafos */
+p a {
+  display: inline;
+}
+
+/* Quitamos los puntos de los <li> */
+li {
+  list-style-type: none;
+}
+
+/* Configuramos anclas suaves */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Desactivamos estilos por defecto de las principales etiquetas de texto */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+a,
+strong,
+blockquote,
+i,
+b,
+u,
+em {
+  font-size: 1em;
+  font-weight: inherit;
+  font-style: inherit;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Evitamos problemas con los pseudoelementos de quotes */
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+/* Configuramos el texto que seleccionamos */
+::-moz-selection {
+  background-color: var(--negro);
+  color: var(--blanco);
+}
+
+::selection {
+  background-color: var(--negro);
+  color: var(--blanco);
+}
+
+/* Nivelamos problemas de tipografías y colocación de formularios */
+form,
+input,
+textarea,
+select,
+button,
+label {
+  font-family: inherit;
+  font-size: inherit;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  background-color: transparent;
+  color: inherit;
+  display: block;
+  /* opcional */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+/* Reseteamos las tablas */
+table,
+tr,
+td {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Evitamos problemas con los SVG */
+svg {
+  /* width: 100%; */
+  display: block;
+  fill: currentColor;
+}
+
+/* (Probándolo, no usar en producción) En el caso de añadir una  */
+/* p svg{
+  display: inline;
+  width: initial;
+  } */
+/* Configuramos la tipografía para toda la web */
+body {
+  min-height: 100vh;
+  font-size: 100%;
+  font-family: Helvetica, Arial, sans-serif;
+  color: var(--negro);
+  /* opcional */
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  /* opcional */
+  font-smooth: always;
+  /* opcional */
+  -webkit-font-smoothing: antialiased;
+  /* opcional */
+  -moz-osx-font-smoothing: grayscale;
+
+  background-color: #F5F5F7;
+
+  font-family: "Ntype82";
+
+}
+
+/* --------------- Reset ------------------  */
+
+
+
+
+/* -------------- Header ----------- */
+/* Descripción: el header de la página web 
+    Estructura:
+    - H1
+    - Botones de menu
+    - Menu desplegable
+ */
+
+.header {
+  padding: 2rem;
+  backdrop-filter: blur(2rem);
+  /* Con esto conseguimos darle un efecto difuminado a todo el header */
+  background: rgba(0, 0, 0, .5254901961);
+  /* establecemos un color semitransparente */
+  width: 90%;
+  color: white;
+  border-radius: 10rem;
+
+  top: 1.25rem;
+  left: calc(50% - (90% / 2));
+  position: fixed;
+  z-index: 1;
+  /* le ponemos 1 para que se superponga por encima de los demás elementos */
+
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1.875rem;
+
+
+  font-family: Nothing;
+
+  animation: cabecera 1.4s linear 1;
+  /* animación para hacer el efecto que hace de arriba a abajo */
+}
+
+@keyframes cabecera {
+  from {
+
+    transform: translateY(-100%);
+    /* Queremos que vaya desde un poco por encima de la web */
+
+  }
+
+  to {
+
+    transform: translateY(0%);
+    /* Hasta su posición original */
+  }
+}
+
+.header__h1 {
+  /* background-color: aqua; */
+}
+
+.header__a {}
+
+/* Aqui termina el H1 y algunos valores del header */
+
+
+.header__div {
+  /* background-color: aqua; */
+  display: none;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-self: center;
+
+  gap: 1.25rem;
+}
+
+.header__svg {
+  /* background-color: brown; */
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.header__svg.carrito {}
+
+.header__svg.persona {}
+
+.header__svg.menu {}
+
+.header__btn {
+  cursor: pointer;
+}
+
+/* Aqui acaban los botones de menu */
+.header__nav {}
+
+.header__ul {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1.875rem;
+}
+
+.header__li {}
+
+/* Aqui acaba el menu desplegable */
+
+/* ------------- Header ------------ */
+
+
+/* -------------- Main ------------- */
+/* Descripción: aqui se encuentran los estilos de la parte principal de la página web
+Estructura:
+- bloque 1: main first
+- bloque 2: main firs reves (es igual que el anterior pero con un row al reves)
+- bloque 3: main estadisticas
+*/
+
+
+.main {
+  /* background-color: red; */
+  margin-top: 7.5rem;
+  min-height: 75rem;
+
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.25rem;
+
+  overflow: hidden;
+
+}
+
+/* ----------------- Bloque 1 - main first --------------*/
+/* 
+            Descripción: es el primer bloque del main donde se encuentra el contenido about us. Se divide en dos bloques
+            principales: uno de contenido texto y otro puramente visual.
+            Estructura:
+            - Main first
+              - first texto
+                - texto h2
+                - texto p
+              - first media
+            */
+.main__first {
+  background-color: black;
+  min-height: 31.25rem;
+
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: stretch;
+  /* esta es la posición original de align items */
+
+}
+
+.first__texto {
+  background-color: white;
+  width: 50%;
+  min-height: 100%;
+  /* quiero que tenga una que ocupe TODA la altura minima del contendor principal*/
+
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 5rem;
+}
+
+.texto__h2 {
+  /* background-color: antiquewhite; */
+  margin-left: 2.5rem;
+
+  font-family: "Nothing";
+  font-size: 2em;
+  /* font-weight: 600; */
+
+}
+
+.texto__p {
+  /* background-color: antiquewhite; */
+  width: 60%;
+  margin-left: 2.5rem;
+
+  font-size: 1.2em;
+
+}
+
+.first__media {
+  background-color: black;
+  width: 50%;
+  min-height: 100%;
+  /* Quiero que ocupe  toda la altura minima del contendor principal */
+
+  transform: skewX(15deg) translateX(-10%);
+  /* por defecto quiero que tenga estos valores, luego con js le modificamos los valores en función del ancho de la ventana */
+
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.first__img {
+  transform: skewX(-20deg);
+  background-color: aliceblue;
+  width: 70%;
+}
+
+
+/* ------------------- bloque 1 - main first -------------- */
+
+
+
+
+/* -------------- bloque 2 - main first reves --------------- */
+/* 
+          Descripción: este es el bloque 2 que es el mismo que el de arriba pero con un reverse para invertir el ordén.
+          Estructura:
+          - main first reves
+           - first texto reves
+            - texto h2 reves
+            - texto p reves
+          - first media reves
+            - first img reves (aqui le añadimos una imagen)
+          */
+.main__first.reves {
+  display: flex;
+  flex-flow: row-reverse;
+  /* se le añade el reverse para que se invierta el orden */
+}
+
+.first__media.reves {
+  transform: none;
+  /* a diferencia del main first (normal) no quiero que tenga ningun efecto por defecto */
+}
+
+.first__texto.reves {
+  align-items: flex-end;
+
+}
+
+.texto__h2.reves {
+  margin-right: 2.5rem;
+}
+
+.texto__p.reves {
+  margin-right: 2.5rem;
+}
+
+.first__img.reves {
+  transform: none;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* quiero que cubra todo el div */
+  object-position: top;
+  /* quiero que se ajuste la posición de la foto desde arriba del contenedor */
+}
+
+/* -------------------- bloque 2 - main first reves ------------- */
+
+
+
+/* -------------------- bloque 3 - estadisticas ----------------- */
+/* 
+          Descripción: en este bloque se tiene por objeto remarcar las estadisticas de la marca Nothing en 4 visuales cuadrados.
+          Estructura: 
+          - Main estadisticas
+            - estadisticas h2
+            - estadisticas contendor
+              - estadisticas div azul
+                - estadisticas numero
+                - estadisticas titulo
+                - estadisticas texto
+              - estadisticas div rosa
+                - estadisticas numero
+                - estadisticas titulo
+                - estadisticas texto
+              - estadisticas div morado
+                - estadisticas numero
+                - estadisticas titulo
+                - estadisticas texto
+              - estadisticas div verde
+                - estadisticas numero
+                - estadisticas titulo
+                - estadisticas texto
+           */
+.main__estadisticas {
+  background-color: white;
+  width: 100%;
+  min-height: 25rem;
+
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 5rem;
+}
+
+.estadisticas__h2 {
+  margin-top: 3.125rem;
+  /* background-color: aliceblue; */
+  width: 90%;
+
+  font-family: "Nothing";
+  font-size: 3em;
+}
+
+.estadisticas__contenedor {
+  /* background-color: aliceblue; */
+  width: 60%;
+  min-height: 200px;
+
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.estadisticas__div {
+  background-color: pink;
+  width: 10rem;
+  min-height: 8.75rem;
+  border-radius: 12%;
+
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 7px;
+
+  transition: all .7s ease;
+}
+
+.estadisticas__div:hover {
+  transform: scale(1.05);
+}
+
+.azul {
+  background-color: #D5DBFF;
+}
+
+.rosa {
+  background-color: #FAD7DC;
+}
+
+.morado {
+  background-color: #EBD5FF;
+}
+
+.verde {
+  background-color: #E8F4D3;
+}
+
+.estadisticas__numero {
+  margin-bottom: 1.25rem;
+  margin-left: .625rem;
+  font-size: 1.3em;
+  font-weight: 600;
+}
+
+.estadisticas__titulo {
+  margin-left: .625rem;
+  font-weight: 600;
+}
+
+.estadisticas__texto {
+  margin-left: .625rem;
+  font-size: .9em;
+}
+
+/* --------------------- bloque 3 - estadisticas ------------  */
+
+/* --------------- Main ---------------------- */
+
+
+
+
+/* ----------------------- footer ------------------ */
+/*  
+    Descripción: es el footer de la página web. Se ha creado con grid.
+Estructura:
+      - product
+        - product h2
+        - product ul > li *4
+      - company
+        - company h2
+        - company ul > li *4
+      - support
+        - support h2
+        - support ul > li *4
+      - email
+        - email__forms
+      - pago
+        - pago h2
+        - pago ul > li *4
+    */
+.footer {
+  margin-top: 3.75rem;
+  background-color: black;
+  min-height: 31.25rem;
+  padding: 1.25rem;
+  color: white;
+  display: grid;
+  grid-template-columns: auto auto auto 40%;
+  /* quiero que sea de 4 columnas con 40% de ancho */
+  grid-template-rows: auto auto;
+  /* quiero que sea de dos filas */
+
+  font-family: 'Ntype82';
+  font-size: 1.2em;
+}
+
+.product {
+
+  /* background-color: yellowgreen; */
+
+
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1.25rem;
+
+}
+
+.product__h2 {
+  margin-left: 1.25rem;
+  margin-top: 1.875rem;
+  font-weight: 600;
+}
+
+.product__ul {}
+
+.product__li {
+  margin: 5px 0px 5px 1.875rem;
+}
+
+.company {
+
+  /* background-color: yellow; */
+
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1.25rem;
+}
+
+.company__h2 {
+  margin-left: 1.25rem;
+  margin-top: 1.875rem;
+  font-weight: 600;
+  /* background-color: orange; */
+}
+
+.company__ul {}
+
+.company__li {
+  margin: 5px 0px 5px 1.875rem;
+
+}
+
+.email {
+  /* background-color: green; */
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.email__form {
+  /* background-color: red; */
+  margin: 8px 0px;
+}
+
+.email__input {
+  padding: 0px 1rem;
+  /* background-color: wheat; */
+  border: 2px solid white;
+  border-radius: 1.25rem;
+  padding: 5px 5px 5px .625rem;
+}
+
+.form__mensaje {
+  /* background-color: red; */
+  margin: 8px 0px;
+}
+
+.button__mensaje {
+  /* background-color: wheat; */
+  border: 2px solid white;
+  border-radius: 1.25rem;
+  padding: 5px;
+}
+
+.email__submit {
+  background-color: white;
+  padding: .8rem;
+  border-radius: 1rem;
+  color: black;
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+.support {
+  /* background-color: rgb(174, 190, 141); */
+  grid-row: 1 / span 2;
+  /* quiero que se expanda dos a la derecha contando desde la linea 1 */
+
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1.25rem;
+}
+
+.support__h2 {
+  margin-top: 1.875rem;
+  margin-left: 1.25rem;
+  font-weight: 600;
+}
+
+.support__ul {}
+
+.support__li {
+  margin: 5px 0px 5px 1.875rem;
+}
+
+.pago {
+  grid-column: 2/4;
+  /* quiero que vaya desde la columna 2 a la 4 */
+
+  /* background-color: rgb(21, 29, 4); */
+}
+
+.pago__h2 {
+  margin: .625rem 1.25rem;
+  font-weight: 600;
+}
+
+.pago__ul {
+  margin-top: 1.875rem;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.pago__li {
+  /* background-color: red; */
+  width: 2.5rem;
+}
+
+/* ---------------- footer ------------------ */
+
+
+
+/* ------------- Responsive ------------------ */
+/* 
+Descripción: es el modo responsive de la web. He seleccionado varios breakpoint para que se adapte a todos los dispositivos
+Estructura:
+ - responsive del header
+ - responsive del main
+ - responsive del footer
+*/
+
+/* ----------- Responsive del header ----------------- */
+/* Descripción: es el responsive del header para un tamaño ancho de ventana de 800px */
+@media (max-width:800px) {
+  .header {
+    padding: 1rem;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .header__div {
+    display: flex;
+  }
+
+  .header__nav {
+    transition: all .6s ease;
+    padding: 1rem 0px;
+    width: 100%;
+    opacity: 0;
+    overflow: hidden;
+    border-radius: 2rem;
+    backdrop-filter: blur(2rem);
+    background: rgba(0, 0, 0, 0.721);
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+
+    position: fixed;
+    top: 3.4375rem;
+    left: 0;
+
+    z-index: 2;
+  }
+
+  .header__ul {
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Esta clase se le añade a través de js a header__nav para que se muestre */
+  .header__nav.active {
+    width: 100%;
+    opacity: 1;
+    margin-top: 5px;
+    backdrop-filter: blur(2rem);
+    background: rgba(0, 0, 0, 0.721);
+  }
+}
+
+/* ----------- Responsive del header ---------------- */
+
+
+
+
+
+/* ------------ Responsive del main ------------- */
+/* Descripcion: este es el media del main. El resto está hecho con js aplicando un resize en funcion del ancho de la venta*/
+
+@media (max-width: 500px) {
+  .estadisticas__contenedor {
+    width: 90%;
+  }
+}
+
+@media (max-width: 600px) {
+  .first__media {
+    transform: skewX(0);
+  }
+}
+/* ------------ Responsive del main ---------------- */
+ /* Descripción: es el responsive del footer, en general, he cambiado todo a columnas y el ancho al 100%*/
+
+@media (max-width:800px) {
+  .footer {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .product {
+    width: 100%;
+    gap: 5px;
+    padding: .625rem;
+  }
+
+  .company {
+    width: 100%;
+    gap: 5px;
+    padding: .625rem;
+  }
+
+  .support {
+    width: 100%;
+    gap: 5px;
+    padding: .625rem;
+  }
+
+  .support__h2 {
+    margin-top: 1px
+  }
+
+  .email {
+    width: 100%;
+    padding: 1.25rem;
+  }
+
+  .pago {
+    width: 100%;
+    padding-bottom: 1.25rem;
+  }
+
+  .wrapped__div {
+    flex-flow: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1.25rem;
+  }
+
+  .wrapped__span {
+    margin: 0 0;
+  }
+
+  .wrapped__help {
+    width: 60%;
+  }
+
+  .productos__carrousel {
+    width: 75%;
+  }
+}
+
+/* -------------- Responsive del header ----------------- */
+
+/* --------------- Responsive -------------------------- */
+

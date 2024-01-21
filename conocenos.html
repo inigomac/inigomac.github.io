@@ -1,0 +1,266 @@
+<!--
+Descripción: Este archivo HTML contiene la página "sobre nosotros" de la web.
+La estructura general se divide en estos bloques:
+- Header o encabezado
+- Main principal
+    - main first (bloque 1 de contenido)
+    - main first reves (bloque 2 de contenido)
+    - main estadisticas (bloque 3 de contenido)
+- footer o pie de página
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conocenos Nothing (r)</title>
+    <link rel="stylesheet" href="css/conocenos.css">
+    <script src="js/conocenos.js" defer></script>
+</head>
+<body>
+
+<!--
+    Sección Header o encabezado
+    Descripción: aqui nos encontramos la cabecera de nuestra web que muestra 3 bloques:
+        - 1º bloque: logotipo
+            - Logotipo de la web y H1
+        - 2º bloque: botones
+            - boton 1
+            - boton 2
+            - boton 3 menu desplegable (este es el unico boton con funciones, los demás están hechos como idea a futuro)
+        - 3º bloque: navegación de la web
+            - Inicio de la web
+            - Nuestros productos
+            - About us
+-->
+
+    <header class="header">
+        <!-- 1º bloque -->
+        <h1 class="header__h1">
+            <a href="index.html" class="header__a" title="Logotipo de Nothing">NOTHING (R)</a>
+        </h1>
+        <!-- Logotipo de web y H1 -->
+
+        <!-- 2º bloque: botones -->
+        <div class="header__div">
+            <span>
+                <svg  class="header__svg carrito" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"  viewBox="0 0 16 16">
+                    <path d="M11.354 6.354a.5.5 0 0 0-.708-.708L8 8.293 6.854 7.146a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z"/>
+                    <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
+                </svg>
+            </span>
+            <!-- Boton svg carrito -->
+            <span>
+                <svg  class="header__svg persona" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"  viewBox="0 0 16 16">
+                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+                    <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+                </svg>
+            </span>
+            <!-- Boton svg persona -->
+            <span>
+                <button class="header__btn">
+                <svg class="header__svg menu" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"  viewBox="0 0 16 16">
+                    <path d="M1.5 0A1.5 1.5 0 0 0 0 1.5v2A1.5 1.5 0 0 0 1.5 5h8A1.5 1.5 0 0 0 11 3.5v-2A1.5 1.5 0 0 0 9.5 0zm5.927 2.427A.25.25 0 0 1 7.604 2h.792a.25.25 0 0 1 .177.427l-.396.396a.25.25 0 0 1-.354 0zM0 8a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm1 3v2a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2zm14-1V8a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v2zM2 8.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5m0 4a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5"/>
+                  </svg>
+                </button>
+            </span>
+            <!-- Boton svg menu desplegable -->
+        </div>
+
+        <!-- 3º bloque: Navegación de la web-->
+        <nav class="header__nav ">
+            <ul class="header__ul">
+                <li class="header__li">
+                    <a href="index.html" title="La página de inicio NOTHING">Inicio</a>
+                </li>
+                <!-- Página home -->
+                <li class="header__li">
+                    <a href="productos.html" title="la página del catalogo NOTHING">Nuestros productos</a>
+                </li>
+                <!-- Página nuestros productos -->
+                <li class="header__li">
+                    <a href="conocenos.html" title="Conoce más sobre NOTHING">Sobre Nosotros</a>
+                </li>
+                <!-- Página conocenos -->
+            </ul>
+        </nav>
+    </header>
+
+<!-- 
+    Sección main principal
+    Descripción: aqui está la parte fundamental de la web y el contenido relaccionado con el about us, tiene 3 bloques:
+        - 1º bloque: Main first: contiene el contenido about us de la web
+            se divide en dos partes:
+                - el texto (alineado a la izquierda)
+                - el div (alineado a la derecha)
+        - 2º bloque: Main first reves: contiene el contenido our story de nuestra web
+            se divide en dos partes:
+                - el texto (alineado a la derecha)
+                - la imagen (alineado a la izquierda)
+        - 3º bloque: Main estadisticas: contiene las estadisticas de ventas y beneficios de Nothing
+            se divide en dos partes:
+                - titulo
+                - div con estadistivas
+                    - 1º estadistica
+                    - 2º estadistica
+                    - 3º estadistica
+                    - 4º estadistica
+-->
+    <main class="main">
+
+        <!-- Comienzo del bloque main first -->
+        <div class="main__first">
+            <!-- Apartado descriptivo -->
+            <div class="first__texto">
+                <h2 class="texto__h2">About us</h2>
+                <!-- Título del apartado -->
+                <p class="texto__p">We’re a London-based tech company on a mission to remove barriers between people and technology.
+                    To do this, we’re crafting intuitive, flawlessly connected products that improve our lives without getting in the way.
+                    No confusing tech-speak. No silly product names. Just artistry, passion and trust. And products we’re proud to share with our friends and family. Simple.
+                    Because beautiful tech shouldn’t be complicated.</p>
+                <!-- Párrafo descriptivo -->
+            </div>
+            <!-- Apartado visual -->
+            <div class="first__media">
+            </div>
+        </div>
+
+        <!-- Comienzo del bloque main first reves -->
+        <div class="main__first reves">
+            <!-- Apartado descriptivo -->
+            <div class="first__texto reves">
+                <h2 class="texto__h2 reves">Our story</h2>
+                <!-- Título del apartado -->
+                <p class="texto__p reves">Making better products is at the heart of our mission, and that doesn’t just mean better looking or better to use. It means doing better. And that starts with our first product, Ear (1).
+                    <br><br>First, we worked with internationally recognised third parties to assess Ear (1)’s environmental impact. To completely neutralise its 1.78kg carbon footprint, we started by offsetting the electricity used in the manufacturing process.
+                    <br><br>We want to keep going beyond having a carbon neutral product. This is just the first step in our journey towards becoming a carbon neutral company.</p>
+                <!-- Párrafo descriptivo our story -->
+            </div>
+            <!-- Apartado visual -->
+            <div class="first__media reves">
+                <img class="first__img reves" src="assets/comunidad.webp" alt="una imagen de nuestra historia" loading="lazy">
+                <!-- Imagen our story -->
+            </div>
+        </div>
+
+        <!-- Comienzo del bloque main__estadisticas -->
+        <div class="main__estadisticas">
+            <!-- Título del bloque -->
+            <h2 class="estadisticas__h2">Estas son todas nuestras estadisticas</h2>
+            <!-- Div contenedor de las estadísticas  -->
+            <div class="estadisticas__contenedor">
+                <!-- Primer div estadísticas -->
+                <div class="estadisticas__div azul">
+                    <span class="estadisticas__numero">€1,5M</span>
+                    <span class="estadisticas__titulo">Ventas</span>
+                    <span class="estadisticas__texto">Nothing phone (R)</span>
+                </div>
+                <!-- Segundo div estadísticas -->
+                <div class="estadisticas__div rosa">
+                    <span class="estadisticas__numero">€7.5M</span>
+                    <span class="estadisticas__titulo">Beneficios</span>
+                    <span class="estadisticas__texto">En el año anterior</span>
+                </div>
+                <!-- Tercer div estadísticas -->
+                <div class="estadisticas__div morado">
+                    <span class="estadisticas__numero">3.5M</span>
+                    <span class="estadisticas__titulo">Unidades</span>
+                    <span class="estadisticas__texto">Ventas de phone</span>
+                </div>
+                <!-- Cuarto div estadísticas -->
+                <div class="estadisticas__div verde">
+                    <span class="estadisticas__numero">€2.5M</span>
+                    <span class="estadisticas__titulo">Ventas</span>
+                    <span class="estadisticas__texto">Ear stick and pro</span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- 
+        Sección footer o pie de página
+        Descripción: Mostramos diferentes apartados para que de un vistazo el cliente pueda navegar por nuestra web haciendo click. La mayoria son enlaces externos anclados a la web oficial de Nothing.
+        Dividimos el footer en varias tématicas cada uno con su titulo y sus enlaces correspondientes:
+            - Productos
+            - Company
+            - Support
+            - Email
+            - Pago
+
+     -->
+
+    <footer class="footer">
+        <!-- Comienzo del apartado productos -->
+        <div class="product">
+            <!-- Título de productos -->
+            <h2 class="product__h2">Productos</h2>
+            <!-- Lista desordenada de diferentes productos con sus respectivos enlaces -->
+            <ul class="product__ul">
+                <li class="product__li"><a href="https://ie.nothing.tech/pages/phone-2" target="_blank" title="Nothing phone 2" rel="noreferrer" >phone (2)</a></li>
+                <li class="product__li"><a href="https://ie.nothing.tech/pages/phone-1" target="_blank" title="Nothing phone 1" rel="noreferrer" >phone (1)</a></li>
+                <li class="product__li"><a href="https://ie.nothing.tech/products/ear-2" target="_blank" title="ear 2" rel="noreferrer" >ear (2)</a></li>
+                <li class="product__li"><a href="https://ie.nothing.tech/products/ear-stick" target="_blank" title="ear stick" rel="noreferrer" >ear (stick)</a></li>
+                <li class="product__li"><a href="https://ie.nothing.tech/pages/store" target="_blank" title="accesorios" rel="noreferrer" >Accesorios</a></li>
+            </ul>
+        </div>
+        <!-- Comienzo del apartado Company -->
+        <div class="company">
+            <!-- Título de Company -->
+            <h2 class="company__h2">Company</h2>
+            <!-- Lista desordenada de diferentes apartados de la compañia con sus enlaces al html de conocenos -->
+            <ul class="company__ul">
+                <li class="company__li"><a href="conocenos.html" title="Sobre nosotros Nothing">About us</a></li>
+                <li class="company__li"><a href="conocenos.html" title="Forma parte de nosotros">Careers</a></li>
+                <li class="company__li"><a href="conocenos.html" title="nuestra comunidad">Community</a></li>
+                <li class="company__li"><a href="conocenos.html" title="nuestras noticias">Newsroom</a></li>
+            </ul>
+        </div>
+        <!-- Comienzo del apartado Soporte -->
+        <div class="support">
+            <!-- Título de Soporte -->
+            <h2 class="support__h2">Support</h2>
+            <!-- Lista desordenada de diferentes apartados de soporte con sus enlaces a la web soporte de Nothing oficial -->
+            <ul class="support__ul">
+                <li class="support__li"><a href="https://ie.nothing.tech/pages/support-centre" target="_blank" title="contact con nosotros" rel="noreferrer" >Contactanos</a></li>
+                <li class="support__li"><a href="https://ie.nothing.tech/pages/support-centre" target="_blank" title="encuentra una tienda" rel="noreferrer" >Find a store</a></li>
+                <li class="support__li"><a href="https://ie.nothing.tech/pages/support-centre" target="_blank" title="nuestros expertos te ayudan" rel="noreferrer" >Expertos</a></li>
+                <li class="support__li"><a href="https://ie.nothing.tech/pages/support-centre" target="_blank" title="Te ofrecemos ayuda" rel="noreferrer" >Ayuda</a></li>
+            </ul>
+        </div>
+        <!-- Comienzo del apartado email
+         Se divide en 3 subapartados:
+                - Dejanos tu feedback  + espacio para rellenar tu email
+                - Escribe tu mensaje + espacio para rellenar tu mensaje
+                - Input de tipo submit para enviar el formulario -->
+        <div class="email">
+        <!-- Se le ha añadido el boton action # para que no se pueda enviar información ya que no tenemos back-end -->
+        <form action="#" class="email__forms" method="get">
+            <label class="email__form" for="email">Dejanos tu feedback</label>
+            <input class="email__input" id="email" type="email" name="email" placeholder="Email">
+            <!-- Se le añade el placeholder "email" para que sepan donde escribir el email -->
+
+            <label class="form__mensaje" for="message">Escribe tu mensaje</label>
+            <textarea class="button__mensaje" id="message" name="message" cols="30" rows="3" placeholder="Mensaje"></textarea>
+            <!-- Se le añade el placeholder "mensaje" para que sepan donde escribir el mensaje -->
+
+            <input class="email__submit" type="submit" value="Enviar">
+        </form>
+        </div>
+        <!-- Comienzo del apartado Pago -->
+        <div class="pago">
+            <!-- Título del apartado pago -->
+            <h2 class="pago__h2">Metodos de pago</h2>
+            <!-- Lista desordenada con 4 imagenes de tarjetas aceptadas -->
+            <ul class="pago__ul">
+                <li class="pago__li"><img src="assets/applepay.webp" alt="tarjeta applepay" loading="lazy"></li>
+                <li class="pago__li"><img src="assets/mastercard.webp" alt="tarjeta mastercard" loading="lazy"></li>
+                <li class="pago__li"><img src="assets/paypal.webp" alt="tarjeta paypal" loading="lazy"></li>
+                <li class="pago__li"><img src="assets/visa.webp" alt="tarjeta visa" loading="lazy"></li>
+
+
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>

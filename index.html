@@ -1,0 +1,285 @@
+<!--
+Descripción: Este archivo HTML contiene la página "home" de la web.
+La estructura general se divide en estos bloques:
+- Header o encabezado
+- Main principal
+    - loading (es un div que se inicia cuando se abre la web y que tienes que tocar un boton), pero se elimina una vez tocado
+    - Sección main video (bloque 1 de contenido)
+    - Sección main np (bloque 2 de contenido)
+    - Sección main np segundo (bloque 3 de contenido)
+- footer o pie de página
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/index.css">
+
+    <script src="js/index.js" defer></script>
+    <!-- Primary Meta Tags -->
+    <title>Mi primer proyecto | Nothing (R) - r</title>
+    <meta name="title" content="Mi primer proyecto | Nothing (R)" />
+    <meta name="description"
+        content="Este es el primer proyecto creado por Iñigo Rivero, desarrollador front-end. Es un re-branding de la web de nothing(r) " />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https//inigorivero.com/" />
+    <meta property="og:title" content="Mi primer proyecto | Nothing (R)" />
+    <meta property="og:description"
+        content="Este es el primer proyecto creado por Iñigo Rivero, desarrollador front-end. Es un re-branding de la web de nothing(r) " />
+    <meta property="og:image" content="https://metatags.io/images/meta-tags.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https//inigorivero.com/" />
+    <meta property="twitter:title" content="Mi primer proyecto | Nothing (R)" />
+    <meta property="twitter:description"
+        content="Este es el primer proyecto creado por Iñigo Rivero, desarrollador front-end. Es un re-branding de la web de nothing(r) " />
+    <meta property="twitter:image" content="https://metatags.io/images/meta-tags.png" />
+
+    <!-- Meta Tags Generated with https://metatags.io -->
+</head>
+
+<body>
+    <!--
+    Sección Header o encabezado
+    Descripción: aqui nos encontramos la cabecera de nuestra web que muestra 3 bloques:
+        - 1º bloque: logotipo
+            - Logotipo de la web y H1
+        - 2º bloque: botones
+            - boton 1
+            - boton 2
+            - boton 3 menu desplegable (este es el unico boton con funciones, los demás están hechos como idea a futuro)
+        - 3º bloque: navegación de la web
+            - Inicio de la web
+            - Nuestros productos
+            - About us
+    -->
+
+    <header class="header">
+    <!-- 1º bloque -->
+    <h1 class="header__h1">
+        <a href="index.html" class="header__a" title="Logotipo de Nothing">NOTHING (R)</a>
+    </h1>
+    <!-- Logotipo de web y H1 -->
+
+    <!-- 2º bloque: botones -->
+    <div class="header__div">
+        <span>
+            <svg  class="header__svg carrito" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"  viewBox="0 0 16 16">
+                <path d="M11.354 6.354a.5.5 0 0 0-.708-.708L8 8.293 6.854 7.146a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z"/>
+                <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
+            </svg>
+        </span>
+        <!-- Boton svg carrito -->
+        <span>
+            <svg  class="header__svg persona" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"  viewBox="0 0 16 16">
+                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+                <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+            </svg>
+        </span>
+        <!-- Boton svg persona -->
+        <span>
+            <button class="header__btn">
+            <svg class="header__svg menu" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"  viewBox="0 0 16 16">
+                <path d="M1.5 0A1.5 1.5 0 0 0 0 1.5v2A1.5 1.5 0 0 0 1.5 5h8A1.5 1.5 0 0 0 11 3.5v-2A1.5 1.5 0 0 0 9.5 0zm5.927 2.427A.25.25 0 0 1 7.604 2h.792a.25.25 0 0 1 .177.427l-.396.396a.25.25 0 0 1-.354 0zM0 8a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm1 3v2a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2zm14-1V8a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v2zM2 8.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5m0 4a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5"/>
+              </svg>
+            </button>
+        </span>
+        <!-- Boton svg menu desplegable -->
+    </div>
+
+    <!-- 3º bloque: Navegación de la web-->
+    <nav class="header__nav ">
+        <ul class="header__ul">
+            <li class="header__li">
+                <a href="index.html" title="La página de inicio NOTHING">Inicio</a>
+            </li>
+            <!-- Página home -->
+            <li class="header__li">
+                <a href="productos.html" title="la página del catalogo NOTHING">Nuestros productos</a>
+            </li>
+            <!-- Página nuestros productos -->
+            <li class="header__li">
+                <a href="conocenos.html" title="Conoce más sobre NOTHING">Sobre Nosotros</a>
+            </li>
+            <!-- Página conocenos -->
+        </ul>
+    </nav>
+    </header>
+
+    <!-- 
+        Sección main
+        Descripción: se encuentra el grueso de la web mostrando información sobre los diferentes productos de Nothing
+        Se divide en:
+            - 1º bloque: Loading: es un div que se inicia a pantalla completa al abrir la página y una vez que hace su animación desaparece
+            - 2º bloque: main video: es la parte principal de la web que muestra un video promocional
+            - 3º bloque: main np: sección primera del nothing phone 2
+            - 4º bloque: main np segunda: sección segunda donde se expone las oportunidades de colaboración de Nothing
+     -->
+    <main class="main">
+        <!-- primer bloque de contenido llamado Loading -->
+        <div class="loading">
+            <button class="loading__btn">
+                <span class="btn__span">Toca para descubrir</span>
+            </button>
+        </div>
+        <!-- Segundo bloque de contenido: parte principal de la web -->
+        <div class="main__video">
+            <!-- El video muestras estos atributos para que se reproduzca en bucle, al cargar la web, sin sonido(para que sea loop), y en silencio (requerido para loop) -->
+            <video class="video__video" preload="none" poster="assets/comunidad.webp" muted loop autoplay playsinline>
+                <!-- He añadido dos source para máximizar la compatibilidad con todos los dispositivos -->
+                <source src="video/principal.webm" type="video/webm">
+                <source src="video/principal.webm" type="video/mp4">
+            </video>
+            <button class="video__button">Compralo ya</button>
+        </div>
+
+        <!-- 
+            Tercer bloque de contenido: sección 1 
+            Se divide en dos partes:
+            - Una imagen parte izquierda
+            - Un texto parte derecha
+        -->
+        <div class="main__np">
+            <!-- Sección izquierda con imagen -->
+            <section class="main__section izquierda">
+                <!-- Este texto es para ponerlo en vertical y todo el rato desplazandose con una animación -->
+                <span class="section__span main">black friday</span>
+                <!-- Titulo de la sección -->
+                <h2 class="section__h2">Te presentamos el nuevo:<br>NOTHING PHONE 2</h2>
+                <img class="section__img np" src="assets/espalda.webp" alt="Nothing phone 2 black" loading="lazy">
+            </section>
+            <!-- Sección derecha con texto (specs del móvil) -->
+            <section class="main__section derecha">
+                <span class="derecha__span">Compra ya el mejor movil del año!</span>
+                <h2 class="derecha__h2">Nothing phone 2</h2>
+                <p class="derecha__p">Diseño exclusivo con Nothing OS 2.
+                    <br>Nueva Interfaz Glyph
+                    <br>Doble cámara trasera de 50MP + cámara delantera de 32MP
+                    <br>Pantalla LPTO AMOLED flexible de 6,7”
+                    <br>Snapdragon® 8+ Gen 1
+                </p>
+                
+                <a class="derecha__button" href="https://ie.nothing.tech/products/phone-2" target="_blank"
+                        title="Boton para comprar el NOTHING phone 2" rel="noreferrer">Comprar ahora</a>
+            </section>
+        </div>
+         <!-- 
+            Cuarto bloque de contenido: sección 2
+            Se divide en dos partes:
+            - Una imagen parte izquierda
+            - Un texto parte derecha
+        -->
+        <div class="main__np segundo">
+            <!-- Sección izquierda con imagen -->
+            <section class="main__section izquierda segunda">
+                <span class="section__span segundo">La navidad</span>
+                <img class="section__img segunda" src="assets/colaboraciones.webp" alt="Nothing phone 2 black"
+                    loading="lazy">
+            </section>
+            <!-- Sección derecha con texto (información sobre colaboraciones) -->
+            <section class="main__section derecha segunda">
+                <h2 class="derecha__h2 segundo">Colaboraciones de Nothing</h2>
+                <p class="derecha__p segundo">Fabricamos productos que te inspiran y te permiten realizar tus propias
+                    creaciones. Con la idea de acercarte al proceso creativo en sí mismo, nos hemos unido a artistas muy
+                    aclamados que se alinean de manera natural con la misión de Nothing de volver a hacer la tecnología
+                    divertida y estimulante.</p>
+                
+                   <a class="derecha__button" href="conocenos.html" title="Colaboraciones de NOTHING con externos" >Descubre más</a>
+                
+            </section>
+        </div>
+    </main>
+
+    <!-- Sección Footer
+    Descripción: se encuentra el pie de página con redes sociales, datos de contacto, etc
+    Se divide en:
+        - 1º bloque: mapa: es un iframe que muestra la tienda oficial de Nothing en el reino unido
+        - 2º bloque: contacto: hay un pequeño formulario para ponernos en contacto contigo
+        - 3º bloque: rrss: 3 enlaces a las redes sociales principales de la compañia
+    -->
+    <footer class="footer">
+        <!-- Bloque 1: un div que contiene un iframe extraido de google maps con tamaño mediano -->
+        <div class="footer__mapa">
+            <!-- Destacar que contiene el atributo loading lazy para que carge lento -->
+            <iframe class="mapa__iframe"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d79456.5487270659!2d-0.2864555027343748!3d51.51290139999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4876053f85f2b69f%3A0x3ce10841aad18fc4!2sNothing%20Store!5e0!3m2!1ses!2sie!4v1703350513074!5m2!1ses!2sie"
+                width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <!-- Bloque 2: contacto: un pequeño formulario básico.
+            Se divide en:
+            - titulo
+            - un input de tipo email
+            - un input de tipo mensaje
+            - div con enlaces a politica de privacidad
+            - input de tipo submit
+        -->
+        <div class="footer__contacto">
+            <!-- He incluido el atributo action con el valor # porque no tenemos un back-end -->
+            <form class="contacto__form" action="#" method="get">
+                <h2 class="form__h2">Contacta con nosotros a traves del siguiente correo</h2>
+                <!-- Sección para enviar tu correo -->
+                <label class="form__email" for="email">Tu email</label>
+                <input class="button__email" id="email" type="email" name="email" placeholder="Email">
+                <!-- Sección para enviar tu mensaje -->
+                <label class="form__mensaje" for="message">Mensaje</label>
+                <textarea class="button__mensaje" id="message" name="message" cols="30" rows="3"
+                    placeholder="Mensaje"></textarea>
+                <!-- Para consultar la política de privacidad -->
+                <div class="form__div">
+                    <a href="https://ie.nothing.tech/pages/privacy-policy" target="_blank"
+                        title="La politica de privacidad de NOTHING" rel="noreferrer" >Política de privacidad</a>
+                    <a href="https://ie.nothing.tech/pages/terms-of-sales" target="_blank"
+                        title="Terminos de venta de NOTHING" rel="noreferrer">Términos de venta</a>
+                </div>
+                <!-- Enviar tu formulario -->
+                <input class="form__button" type="submit" value="Enviar">
+            </form>
+        </div>
+
+        <!-- Bloque 3: rrss. Es una lista desorneada con 3 li -->
+        <ul class="footer__ul">
+            <!-- Primer svg con enlace a instagram -->
+            <li class="footer__li">
+                <a href="https://www.instagram.com/nothing/?hl=es" target="_blank" title="El instagram de NOTHING" rel="noreferrer" >
+                    <svg class="footer__svg instagram"
+                    xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                    <path
+                        d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
+                    </svg>
+                </a>
+            </li>
+            <!-- Segundo svg con enlace a twitter -->
+            <li class="footer__li">
+                <a href="https://twitter.com/nothing?lang=es" target="_blank" title="el twitter de NOTHING" rel="noreferrer" >
+                    <svg class="footer__svg twitter"
+                    xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                    <path
+                        d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865l8.875 11.633Z" />
+                </svg>
+                </a>
+            </li>
+            <!-- Tercer svg con enlace a soporte -->
+            <li class="footer__li">
+                <a href="https://ie.nothing.tech/pages/contact-support" target="_blank" title="el whastapp de NOTHING" rel="noreferrer" >
+                    <svg class="footer__svg wasap" xmlns="http://www.w3.org/2000/svg"
+                    width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                    <path
+                        d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z" />
+                </svg>
+                </a>
+            </li>
+        </ul>
+
+    </footer>
+
+</body>
+
+</html>
